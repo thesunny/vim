@@ -1,7 +1,10 @@
 if has('gui_running')
   colorscheme mustang
   set gfn=Consolas:h10:cANSI
+  set lines=100 columns=100
 endif
+
+call pathogen#infect()
 
 " nnoremap ; :
 " set nowrap
