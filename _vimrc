@@ -15,10 +15,13 @@ let mapleader=","
 nmap <silent> <leader>v :vsp $HOME\vimfiles\_vimrc<CR>
 nmap <silent> <leader>u :so $MYVIMRC<CR>
 
-" toggle nerd tree with CTRL-N
-nmap <silent> <c-n> :NERDTreeToggle<CR>
+" toggle nerd tree with CTRL-N or LEADER-N
+nmap <silent> <c-t> :NERDTreeToggle<CR>
+nmap <silent> <leader>t :NERDTreeToggle<CR>
 " nnoremap ; :
 " set nowrap
+
+" TODO: Add leader-f or leader-r for CTRL-P Finder
 
 " added a nice shortcut for making the screen full width
 nmap <silent> <leader>ww :set columns=1000<CR>
