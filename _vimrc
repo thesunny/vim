@@ -6,6 +6,7 @@ endif
 
 call pathogen#infect()
 
+nmap <silent> <c-n> :NERDTreeToggle<CR>
 " nnoremap ; :
 " set nowrap
 set tabstop=2
