@@ -4,3 +4,6 @@
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
 	url = http://github.com/kien/ctrlp.vim.git
+[submodule "bundle/vim-slim"]
+	path = bundle/vim-slim
+	url = http://github.com/bbommarito/vim-slim.git
