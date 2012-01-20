@@ -12,8 +12,8 @@ call pathogen#infect()
 let mapleader=","
 
 " Quickly edit/reload the vimrc file
-nmap <silent> <leader>ev :e $MYVIMRC<CR>
-nmap <silent> <leader>sv :so $MYVIMRC<CR>
+nmap <silent> <leader>v :vsp $HOME\vimfiles\_vimrc<CR>
+nmap <silent> <leader>u :so $MYVIMRC<CR>
 
 " toggle nerd tree with CTRL-N
 nmap <silent> <c-n> :NERDTreeToggle<CR>
@@ -22,6 +22,15 @@ nmap <silent> <c-n> :NERDTreeToggle<CR>
 
 " added a nice shortcut for making the screen full width
 nmap <silent> <leader>ww :set columns=1000<CR>
+
+" easy window navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+" Allow backspacing over everything in insert mode
+set backspace=indent,eol,start
 
 " tab helpers
 set tabstop=2
