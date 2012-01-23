@@ -35,13 +35,17 @@ nmap <silent> <leader>ws :set columns=100<CR>
 " window split shortcuts
 nmap <leader>wv <C-w>v
 nmap <leader>wh <C-w>s
-nmap <leader>wc :q<CR>
+nmap <leader>wc :q<CR>      " window close
+nmap <leader>c :q<CR>       " close (window)
 
 " easy window navigation
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+
+" remap home key so that it starts at the first non-space character of line
+map <home> ^
 
 " resize vertical split with +(=)/- on keyboard
 nnoremap <silent> = <C-w>>

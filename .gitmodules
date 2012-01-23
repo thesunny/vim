@@ -7,3 +7,6 @@
 [submodule "bundle/vim-slim"]
 	path = bundle/vim-slim
 	url = http://github.com/bbommarito/vim-slim.git
+[submodule "bundle/minibufexpl"]
+	path = bundle/minibufexpl
+	url = http://github.com/fholgado/minibufexpl.vim.git
