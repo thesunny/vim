@@ -24,18 +24,23 @@ nmap <silent> <leader>t :NERDTreeToggle<CR>
 " set nowrap
 
 " Add leader-f or leader-r for CTRL-P Finder
-nmap <leader>f :CtrlPMRU<CR>
-nmap <leader>b :CtrlPBuffer<CR>
+" Can't get the CTRL-K thing to work for some reason...
+nmap <C-k> :CtrlP<CR>         " find files similar to CTRL-K in Chrome
+nmap <leader>ff :CtrlPMRU<CR>
+nmap <leader>fb :CtrlPBuffer<CR>
 
 " added a nice shortcut for making the screen full width
 nmap <silent> <leader>ww :set columns=1000<CR>
 nmap <silent> <leader>wm :set columns=150<CR>
 nmap <silent> <leader>ws :set columns=100<CR>
 
-" window split shortcuts
+" WINDOW SHORTCUTS
+
+" window split and close shortcuts
 nmap <leader>wv <C-w>v
 nmap <leader>wh <C-w>s
-nmap <leader>wc :q<CR>
+nmap <leader>wc :q<CR>    " window close shortcut for closing window
+nmap <leader>c :q<CR>     " quick shortcut for closing window
 
 " easy window navigation
 map <C-h> <C-w>h
@@ -46,7 +51,10 @@ map <C-l> <C-w>l
 " resize vertical split with +(=)/- on keyboard
 nnoremap <silent> = <C-w>>
 nnoremap <silent> - <C-w><
+nnoremap <silent> _ <C-w>-
+nnoremap <silent> + <C-w>+
 
+" Git shortcuts for fugitive
 nmap <leader>s :w<CR>:echo "Saved"<CR>
 
 " Allow backspacing over everything in insert mode
