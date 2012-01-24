@@ -51,6 +51,20 @@ map <home> ^
 nnoremap <silent> = <C-w>>
 nnoremap <silent> - <C-w><
 
+" buffer switching
+nmap <C-tab> :bnext<CR>
+nmap <C-S-tab> :bprevious<CR>
+nmap <leader>1 :b 1<CR>
+nmap <leader>2 :b 2<CR>
+nmap <leader>3 :b 3<CR>
+nmap <leader>4 :b 4<CR>
+nmap <leader>5 :b 5<CR>
+nmap <leader>6 :b 6<CR>
+nmap <leader>7 :b 7<CR>
+nmap <leader>8 :b 8<CR>
+nmap <leader>9 :b 9<CR>
+
+" Quick Save
 nmap <leader>s :w<CR>:echo "Saved"<CR>
 
 " Allow backspacing over everything in insert mode
