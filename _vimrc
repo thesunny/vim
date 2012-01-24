@@ -79,6 +79,12 @@ nmap <leader>9 :b 9<CR>
 " Quick Save
 nmap <leader>s :w<CR>:echo "Saved"<CR>
 
+" Edit Hosts file
+nmap <leader>ho :e \Windows\System32\drivers\etc\hosts<CR>
+
+" Trying it out. use jj to exit insert mode.
+inoremap jj <ESC>
+
 " Allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 set whichwrap+=<,>,h,l
@@ -108,3 +114,5 @@ set noerrorbells     " don't beep
 
 set nobackup         " don't let vim do auto backups
 set noswapfile       " don't let vim do swap files
+
+set relativenumber   " shows line numbers relative to current line
