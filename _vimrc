@@ -48,6 +48,9 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+" remap home key so that it starts at the first non-space character of line
+map <home> ^
+
 " resize vertical split with +(=)/- on keyboard
 nnoremap <silent> = <C-w>>
 nnoremap <silent> - <C-w><
@@ -55,6 +58,25 @@ nnoremap <silent> _ <C-w>-
 nnoremap <silent> + <C-w>+
 
 " Git shortcuts for fugitive
+" gs for git status
+" gc for git commit
+" gpull for git pull (make it longer so we can't do it by accident)
+" gpush for git push (make it longer so we can't do it by accident)
+
+" buffer switching
+nmap <C-tab> :bnext<CR>
+nmap <C-S-tab> :bprevious<CR>
+nmap <leader>1 :b 1<CR>
+nmap <leader>2 :b 2<CR>
+nmap <leader>3 :b 3<CR>
+nmap <leader>4 :b 4<CR>
+nmap <leader>5 :b 5<CR>
+nmap <leader>6 :b 6<CR>
+nmap <leader>7 :b 7<CR>
+nmap <leader>8 :b 8<CR>
+nmap <leader>9 :b 9<CR>
+
+" Quick Save
 nmap <leader>s :w<CR>:echo "Saved"<CR>
 
 " Allow backspacing over everything in insert mode
