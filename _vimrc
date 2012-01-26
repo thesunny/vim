@@ -18,6 +18,7 @@ nmap <silent> <leader>v :vsp $HOME\vimfiles\_vimrc<CR>
 nmap <silent> <leader>u :so $MYVIMRC<CR>
 
 " toggle nerd tree with CTRL-N or LEADER-N
+autocmd vimenter * NERDTree
 nmap <silent> <c-t> :NERDTreeToggle<CR>
 nmap <silent> <leader>t :NERDTreeToggle<CR>
 " nnoremap ; :
@@ -35,8 +36,7 @@ nmap <silent> <leader>ws :set columns=100<CR>
 " window split shortcuts
 nmap <leader>wv <C-w>v
 nmap <leader>wh <C-w>s
-nmap <leader>wc :q<CR>      " window close
-nmap <leader>c :q<CR>       " close (window)
+nmap <leader>wc :q<CR>
 
 " easy window navigation
 map <C-h> <C-w>h
@@ -44,8 +44,18 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+" easier navigation and editing start
 " remap home key so that it starts at the first non-space character of line
 map <home> ^
+nmap <CR> i<CR>
+nmap <space> i
+nmap <C-space> i
+nmap <C-CR> o<esc>
+nmap <C-S-CR> O<esc>
+imap <C-space> <esc>
+imap jj <esc>
+imap jk <esc>
+noremap <C-z> u
 
 " resize vertical split with +(=)/- on keyboard
 nnoremap <silent> = <C-w>>
@@ -63,6 +73,7 @@ nmap <leader>6 :b 6<CR>
 nmap <leader>7 :b 7<CR>
 nmap <leader>8 :b 8<CR>
 nmap <leader>9 :b 9<CR>
+set hidden                   " hide buffers instead of closing them so I can tab easily
 
 " Quick Save
 nmap <leader>s :w<CR>:echo "Saved"<CR>
