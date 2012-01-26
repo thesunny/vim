@@ -25,15 +25,19 @@ nmap <silent> <leader>t :NERDTreeToggle<CR>
 " set nowrap
 
 " Add leader-f or leader-r for CTRL-P Finder
-nmap <leader>f :CtrlPMRU<CR>
-nmap <leader>b :CtrlPBuffer<CR>
+" Can't get the CTRL-K thing to work for some reason...
+nmap <C-k> :CtrlP<CR>         " find files similar to CTRL-K in Chrome
+nmap <leader>ff :CtrlPMRU<CR>
+nmap <leader>fb :CtrlPBuffer<CR>
 
 " added a nice shortcut for making the screen full width
 nmap <silent> <leader>ww :set columns=1000<CR>
 nmap <silent> <leader>wm :set columns=150<CR>
 nmap <silent> <leader>ws :set columns=100<CR>
 
-" window split shortcuts
+" WINDOW SHORTCUTS
+
+" window split and close shortcuts
 nmap <leader>wv <C-w>v
 nmap <leader>wh <C-w>s
 nmap <leader>wc :q<CR>
@@ -60,6 +64,14 @@ noremap <C-z> u
 " resize vertical split with +(=)/- on keyboard
 nnoremap <silent> = <C-w>>
 nnoremap <silent> - <C-w><
+nnoremap <silent> _ <C-w>-
+nnoremap <silent> + <C-w>+
+
+" Git shortcuts for fugitive
+" gs for git status
+" gc for git commit
+" gpull for git pull (make it longer so we can't do it by accident)
+" gpush for git push (make it longer so we can't do it by accident)
 
 " buffer switching
 nmap <C-tab> :bnext<CR>
@@ -77,6 +89,12 @@ set hidden                   " hide buffers instead of closing them so I can tab
 
 " Quick Save
 nmap <leader>s :w<CR>:echo "Saved"<CR>
+
+" Edit Hosts file
+nmap <leader>ho :e \Windows\System32\drivers\etc\hosts<CR>
+
+" Trying it out. use jj to exit insert mode.
+inoremap jj <ESC>
 
 " Allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -107,3 +125,5 @@ set noerrorbells     " don't beep
 
 set nobackup         " don't let vim do auto backups
 set noswapfile       " don't let vim do swap files
+
+set relativenumber   " shows line numbers relative to current line
