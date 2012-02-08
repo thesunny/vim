@@ -7,6 +7,8 @@ endif
 
 " use pathogen to load plugins from bundle
 call pathogen#infect()
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
 
 " change the leader key from \ to , for easier access
 " then make an alias for it
@@ -45,10 +47,16 @@ nmap <leader>wh <C-w>s
 nmap <leader>wc :q<CR>
 
 " easy window navigation
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
+
+" allow CTRL-H, CTRL-J, CTRL-K, CTRL-L navigation in insert mode
+imap <C-h> <Left>
+imap <C-j> <Down>
+imap <C-k> <Up>
+imap <C-l> <Right>
 
 " easier navigation and editing start
 " remap home key so that it starts at the first non-space character of line
@@ -104,6 +112,7 @@ set whichwrap+=<,>,h,l
 set nowrap          " do not wrap lines
 
 " tab and indent helpers
+filetype plugin indent on
 set tabstop=2
 set shiftwidth=2
 set expandtab       " converts tabs to space
