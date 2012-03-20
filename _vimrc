@@ -5,6 +5,9 @@ if has('gui_running')
   set lines=100 columns=150
 endif
 
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
+
 " use pathogen to load plugins from bundle
 call pathogen#infect()
 call pathogen#runtime_append_all_bundles()
@@ -39,6 +42,7 @@ nmap <silent> <leader>ww :set columns=1000<CR>
 nmap <silent> <leader>wm :set columns=150<CR>
 nmap <silent> <leader>ws :set columns=100<CR>
 
+
 " WINDOW SHORTCUTS
 
 " window split and close shortcuts
@@ -52,6 +56,14 @@ nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
+
+" TAB SHORTCUTS
+nmap <leader>tn :tabnew<CR>
+nmap <leader>tc :tabclose<CR>
+nmap <leader>tl :tabn<CR>
+nmap <leader>th :tabp<CR>
+
+" INSERT MODE SHORTCUTS
 " allow CTRL-H, CTRL-J, CTRL-K, CTRL-L navigation in insert mode
 imap <C-h> <Left>
 imap <C-j> <Down>
@@ -138,3 +150,5 @@ set nobackup         " don't let vim do auto backups
 set noswapfile       " don't let vim do swap files
 
 set relativenumber   " shows line numbers relative to current line
+
+
