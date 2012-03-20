@@ -29,7 +29,7 @@ nmap <silent> <leader>t :NERDTreeToggle<CR>
 " Add leader-f or leader-r for CTRL-P Finder
 " Can't get the CTRL-K thing to work for some reason...
 nmap <C-k> :CtrlP<CR>         " find files similar to CTRL-K in Chrome
-nmap ' :CtrlP<CR>
+nmap \ :CtrlP<CR>
 nmap <leader>ff :CtrlP<CR>
 nmap <leader>fr :CtrlPMRU<CR>
 nmap <leader>fb :CtrlPBuffer<CR>
